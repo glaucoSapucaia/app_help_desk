@@ -53,18 +53,23 @@
                         <!-- card body -->
                         <div class="card-body">
                             <!-- form -->
-                            <form action="">
+
+                            <!-- action='' | Indica o envio de informações -->
+                            <!-- method='post' | Indicando o método POST, temos mais segurança, -->
+                            <!-- já que os dados não aprecem na URL -->
+
+                            <form action="../asset/valida_login.php" method='post'>
                                 <div class="form-group mb-2">
-                                    <input type="email" class="form-control" placeholder='E-mail'>
+                                    <input name='email' type="email" class="form-control" placeholder='E-mail'>
                                 </div>
 
                                 <div class="form-group mb-2">
-                                    <input type="password" class="form-control" placeholder='Senha'>
+                                    <input name='senha' type="password" class="form-control" placeholder='Senha'>
                                 </div>
 
                                 <!-- btn -->
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-info btn-block" type='submit'>Entrar</button>
+                                    <button class="btn btn-lg btn-info" type='submit'>Entrar</button>
                                 </div>
                             </form>
                         </div>
