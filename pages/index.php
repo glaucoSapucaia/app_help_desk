@@ -67,6 +67,21 @@
                                     <input name='senha' type="password" class="form-control" placeholder='Senha'>
                                 </div>
 
+                                <!-- recperando parametros de erro do array $_GET -->
+                                
+                                <?php
+                                    // isset() -> Verifica se determinada chave existe no array
+                                    if (isset($_GET['login']) && $_GET['login'] == 'erro') {
+                                ?>
+
+                                    <div class="text-danger mb-2">
+                                        Login inválido!
+                                    </div>
+
+                                <!-- Podemos sobrepor tags php -->
+                                <!-- Desta forma, conseguimos incluir tags HTML ao fluxo de forma rápida e limpa -->
+                                <?php } ?>
+
                                 <!-- btn -->
                                 <div class="d-grid">
                                     <button class="btn btn-lg btn-info" type='submit'>Entrar</button>

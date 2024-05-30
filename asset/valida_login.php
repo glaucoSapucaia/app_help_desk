@@ -7,8 +7,38 @@
     // echo '</pre>';
 
     // super global POST | type array
-    echo '<pre>';
-        print_r($_POST);
-    echo '</pre>';
+    // Captura parâmetros dos campos name= (input) com o método POST
+
+    // echo '<pre>';
+    //     print_r($_POST);
+    // echo '</pre>';
+
+
+    // Validando usuários | testes
+
+    $usuarios_app = [
+        ['email' => 'teste@teste.com', 'senha' => '123456'],
+        ['email' => 'adm@adm.com', 'senha' => 'adm123'],
+    ];
+
+    $usuario_autenticado = false;
+
+    foreach ($usuarios_app as $user) {
+        if (
+            $user['email'] == $_POST['email'] &&
+            $user['senha'] == $_POST['senha']
+        ) {
+            $usuario_autenticado = true;
+        }
+    };
+
+    // header() -> Força o redirecionamento de uma página
+    // ?login=erro -> adicionando a chave login e valor erro ao array $_GET
+
+    if ($usuario_autenticado) {
+        echo "Login efetuado!";
+    } else {
+        header('Location: ../pages/index.php?login=erro');
+    }
 
 ?>
