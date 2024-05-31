@@ -1,4 +1,15 @@
 <?php
+
+    // session_start -> Indica o inicio de uma seção e permite o
+    // dialogo entre back end e front end (resgate de dados)
+    // seções PHP duram em média 3 horas
+
+    session_start();
+
+    // super global $_SESSION (array)
+
+    // print_r($_SESSION);
+
     // super global GET | type array
     // Captura parâmetros dos campos name= (input) com o método GET
 
@@ -35,9 +46,13 @@
     // header() -> Força o redirecionamento de uma página
     // ?login=erro -> adicionando a chave login e valor erro ao array $_GET
 
+    // elemento de controle | $_SESSION
+
     if ($usuario_autenticado) {
         echo "Login efetuado!";
+        $_SESSION['autenticado'] = 'SIM';
     } else {
+        $_SESSION['autenticado'] = 'NAO';
         header('Location: ../pages/index.php?login=erro');
     }
 
