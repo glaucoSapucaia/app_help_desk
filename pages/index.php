@@ -82,6 +82,15 @@
                                 <!-- Desta forma, conseguimos incluir tags HTML ao fluxo de forma rápida e limpa -->
                                 <?php } ?>
 
+                                <?php
+                                    if (isset($_GET['login']) && $_GET['login'] == 'erro2') {
+                                ?>
+
+                                    <div class="text-danger mb-2">
+                                        É necessário fazer o login!
+                                    </div>
+                                <?php } ?>
+
                                 <!-- btn -->
                                 <div class="d-grid">
                                     <button class="btn btn-lg btn-info" type='submit'>Entrar</button>
