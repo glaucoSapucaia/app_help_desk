@@ -59,30 +59,30 @@
                                 <div class="col">
 
                                     <!-- form -->
-                                    <form action="">
+                                    <form action="../asset/registra_chamado.php" method='post'>
                                         <!-- titulo -->
                                         <div class="form-group mb-2">
                                             <label for="">Título</label>
-                                            <input type="text" class="form-control" placeholder='Título'>
+                                            <input name='titulo' type="text" class="form-control" placeholder='Título'>
                                         </div>
 
                                         <!-- categoria -->
                                         <div class="form-group mb-2">
                                             <label for="">Categoria</label>
-                                            <select name="" id="" class="form-control">
+                                            <select name="categoria" id="" class="form-control">
                                                 <option value="">-- Categorias --</option>
-                                                <option value="">Criação Usuário</option>
-                                                <option value="">Impressora</option>
-                                                <option value="">Hardware</option>
-                                                <option value="">Software</option>
-                                                <option value="">Rede</option>
+                                                <option value="Criacao_Usuario">Criação Usuário</option>
+                                                <option value="Impressora">Impressora</option>
+                                                <option value="Hardware">Hardware</option>
+                                                <option value="Software">Software</option>
+                                                <option value="Rede">Rede</option>
                                             </select>
                                         </div>
 
                                         <!-- descricao -->
                                         <div class="form-group mb-2">
                                             <label for="">Descrição</label>
-                                            <textarea name="" id="" class="form-control" rows='3'></textarea>
+                                            <textarea name="descricao" id="" class="form-control" rows='3'></textarea>
                                         </div>
 
                                         <!-- btn -->
