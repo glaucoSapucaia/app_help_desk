@@ -88,7 +88,7 @@
                                         <!-- btn -->
                                         <div class="row mt-5">
                                             <div class="col-6 d-grid">
-                                                <button class="btn btn-lg btn-warning" type='submit'>Voltar</button>
+                                                <a class="btn btn-lg btn-warning" href='home.php' >Voltar</a>
                                             </div>
 
                                             <div class="col-6 d-grid">

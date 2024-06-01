@@ -51,6 +51,7 @@
     if ($usuario_autenticado) {
         echo "Login efetuado!";
         $_SESSION['autenticado'] = 'SIM';
+        header('Location: ../pages/home.php');
     } else {
         $_SESSION['autenticado'] = 'NAO';
         header('Location: ../pages/index.php?login=erro');
