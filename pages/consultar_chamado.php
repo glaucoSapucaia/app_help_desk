@@ -1,10 +1,6 @@
 <!-- verificações com SEÇÃO -->
 <?php
-    session_start();
-
-    if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM') {
-        header('Location: ../pages/index.php?login=erro2');        
-    }
+    require_once 'partials/valida_acesso.php';
 ?>
 
 <!doctype html>
@@ -39,12 +35,9 @@
     <body>
 
         <!-- nav -->
-        <nav class="navbar navbar-dark bg-dark">
-            <a href="#" class="navbar-brand p-3">
-                <img src="../img/logo.jpg" width='30' height='30' alt="" class="d-inline-block align-top me-2">
-                App Help Desk
-            </a>
-        </nav>
+        <?php
+            include_once 'partials/menu_nav.php';
+        ?>
 
         <!-- container -->
         <div class="container">
