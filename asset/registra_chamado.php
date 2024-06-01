@@ -26,7 +26,7 @@
 
     // abrir | criar arquivo
     // 'a' -> indica o acumulo de linhas (escrita ao final do arquivo)
-    $arquivo = fopen('../data/arquivo.txt', 'a');
+    $arquivo = fopen('../../../app_help_desk_help/arquivo.txt', 'a');
 
     // editando arquivo
     fwrite($arquivo, $texto);

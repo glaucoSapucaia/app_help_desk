@@ -3,7 +3,7 @@
     $chamados = [];
 
     // abrindo arquivo
-    $arquivo = fopen('../data/arquivo.txt', 'r');
+    $arquivo = fopen('../../../app_help_desk_help/arquivo.txt', 'r');
 
     // iterando sobre arquivo
     // feof() -> End Of File -> Indentifica o fim do arquivo e finaliza a iteração.
