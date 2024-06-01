@@ -3,6 +3,11 @@
     require_once 'partials/valida_acesso.php';
 ?>
 
+<!-- recuperando dados (chamados) -->
+<?php
+    include '../asset/recupera_chamado.php';
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -54,23 +59,10 @@
                         <!-- body -->
                         <div class="card-body">
 
-                            <!-- card 1 -->
-                            <div class="card mb-3 bg-light">
-                                <div class="card-body">
-                                    <h5 class="card-title">Titulo chamado...</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                                    <p class="card-text">Descrição chamado...</p>
-                                </div>
-                            </div>
-
-                            <!-- card 2 -->
-                            <div class="card mb-3 bg-light">
-                                <div class="card-body">
-                                    <h5 class="card-title">Titulo chamado...</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                                    <p class="card-text">Descrição chamado...</p>
-                                </div>                             
-                            </div>
+                            <!-- recuperando chamados -->
+                            <?php
+                                include 'partials/cards_chamados.php';
+                            ?>
 
                             <!-- btn -->
                             <div class="row mt-5">
