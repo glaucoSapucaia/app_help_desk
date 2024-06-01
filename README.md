@@ -16,3 +16,9 @@ require retorna um fatal error (código para).
 ![alt text](/img/image-1.png)
 ### Em caso de _once:
 O script será incluido na página apenas uma vez.
+
+# Vulnerabilidades e Diretórios Privados
+- Diretório público AMPP Stack: htdocs folder.
+- Crie uma pasta local, no diretório "C:/xampp", por exemplo.
+- Mova arquivos e scripts sigilosos para a pasta local.
+- Utilize de require para acessar os arquivos fora de htdocs (diretório público).
