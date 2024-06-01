@@ -1,6 +1,9 @@
 <!-- verificações com SEÇÃO -->
 <?php
     require_once 'partials/valida_acesso.php';
+    // echo '<pre>';
+    //     print_r($_SESSION);
+    // echo '</pre>';
 ?>
 
 <!doctype html>

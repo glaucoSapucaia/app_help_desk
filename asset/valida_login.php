@@ -27,12 +27,22 @@
 
     // Validando usuários | testes
 
-    $usuarios_app = [
-        ['email' => 'teste@teste.com', 'senha' => '123456'],
-        ['email' => 'adm@adm.com', 'senha' => 'adm123'],
+    $usuario_autenticado = false;
+    $usuario_id = null;
+    $usuario_perfil_id = null;
+
+    // Criando perfis de usuários
+    $perfis = [
+        1 => 'Administrador',
+        2 => 'Usuário',
     ];
 
-    $usuario_autenticado = false;
+    $usuarios_app = [
+        ['id' => 1, 'email' => 'adm@adm.com', 'senha' => 'adm1234', 'perfil_id' => 1],
+        ['id' => 2, 'email' => 'teste@teste.com', 'senha' => '1234', 'perfil_id' => 2],
+        ['id' => 3, 'email' => 'maria@teste.com', 'senha' => '1234', 'perfil_id' => 2],
+        ['id' => 4, 'email' => 'jose@teste.com', 'senha' => '1234', 'perfil_id' => 2],
+    ];
 
     foreach ($usuarios_app as $user) {
         if (
@@ -40,6 +50,8 @@
             $user['senha'] == $_POST['senha']
         ) {
             $usuario_autenticado = true;
+            $usuario_id = $user['id'];
+            $usuario_perfil_id = $user['perfil_id'];
         }
     };
 
@@ -51,6 +63,8 @@
     if ($usuario_autenticado) {
         echo "Login efetuado!";
         $_SESSION['autenticado'] = 'SIM';
+        $_SESSION['id'] = $usuario_id;
+        $_SESSION['perfil_id'] = $usuario_perfil_id;
         header('Location: ../pages/home.php');
     } else {
         $_SESSION['autenticado'] = 'NAO';
